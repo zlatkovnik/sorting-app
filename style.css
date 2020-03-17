@@ -15,14 +15,16 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  height: 70%;
-  width: 90%;
+  height: 80%;
+  width: 100%;
   border: solid 1px black;
   display: flex;
   align-items: flex-end;
 }
 
 .element {
+  position: relative;
   background-color: #2892d7;
+  margin-left: 0px;
   flex: 1;
 }

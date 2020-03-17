@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+}
+
+.header-container {
+  background-color: #173753;
+  color: #eee;
+  display: flex;
+  height: 60px;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70%;
+  width: 90%;
+  border: solid 1px black;
+  display: flex;
+  align-items: flex-end;
+}
+
+.element {
+  background-color: #2892d7;
+  flex: 1;
+}

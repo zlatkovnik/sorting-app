@@ -40,6 +40,8 @@ function swap(i, j) {
 
   return new Promise(resolve => {
     setTimeout(() => {
+      elements[j].style.backgroundColor = "#2892d7";
+      elements[j + 1].style.backgroundColor = "#2892d7";
       resolve();
     }, 1000 / speed);
   });
@@ -50,14 +52,23 @@ async function bubbleSort() {
     for (let j = 0; j < array.length - 1 - i; j++) {
       if (array[j] > array[j + 1]) {
         await swap(j, j + 1);
-        elements[j].style.backgroundColor = "#2892d7";
-        elements[j + 1].style.backgroundColor = "#2892d7";
       }
     }
   }
-  return new Promise(resolve => {});
+}
+
+async function insertionSort() {
+  for (let i = 1; i < array.length; i++) {
+    let key = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > key) {
+      await swap(j + 1, j);
+      j--;
+    }
+    array[j + 1] = key;
+  }
 }
 
 //Logic
 fillArray(301);
-bubbleSort();
+insertionSort();
